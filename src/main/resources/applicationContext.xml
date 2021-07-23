@@ -8,4 +8,21 @@
         <property name="age" value="20"/>
     </bean>
 
+    <bean id="serviceTest" class="com.spring.kernel.aop.ServiceImpl"/>
+    <bean id="advisorTest" class="com.spring.kernel.aop.AdvisorTest"/>
+
+    <bean id="aopTest" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces">
+            <value>com.spring.kernel.aop.ServiceInterface</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>advisorTest</value>
+            </list>
+        </property>
+        <property name="target">
+            <ref bean="serviceTest"/>
+        </property>
+    </bean>
+
 </beans>
