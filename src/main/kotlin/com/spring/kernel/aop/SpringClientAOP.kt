@@ -1,7 +1,5 @@
 package com.spring.kernel.aop
 
-import com.spring.kernel.bean.Student
-import org.springframework.beans.factory.support.BeanDefinitionReader
 import org.springframework.beans.factory.support.DefaultListableBeanFactory
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 import org.springframework.core.io.ClassPathResource
